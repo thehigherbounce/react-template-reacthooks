@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import userSlice from "./userSlice"
 
 const initialState = {
     value: 0,
@@ -19,6 +20,6 @@ export const counterSlice = createSlice({
     },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const selectUser = (rootState) => rootState.user.user
 
-export default counterSlice.reducer
+export default userSlice.reducer
